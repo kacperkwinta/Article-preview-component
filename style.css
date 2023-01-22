@@ -18,14 +18,17 @@ html {
 
 body {
   font-size: 1.3rem;
+  background-color: var(--clr-four);
 }
 
 article {
+  /* border: 2px solid red */
+  max-width: 70rem;
   margin: 10rem auto;
-  border: 2px solid red;
   width: fit-content;
   border-radius: 10px;
-  overflow: hidden;
+  background-color: #fff;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
   display: flex;
   align-items: center;
@@ -33,7 +36,76 @@ article {
 }
 
 .article-img {
+  /* border: 2px solid green; */
+
+  border-radius: 10px 0 0 10px;
   width: 30rem;
+}
+
+.article-text {
+  padding: 2rem;
+}
+
+.article-title {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  color: var(--clr-one);
+}
+
+.article-desc {
+  color: var(--clr-two);
+  margin-bottom: 1.2rem;
+}
+
+.profile-wrapper {
+  /* border: 1px solid orangered; */
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-img {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  margin-right: 1.2rem;
+}
+
+.author {
+  color: var(--clr-two);
+  font-weight: 700;
+}
+
+.article-date {
+  font-size: 1rem;
+  color: var(--clr-three);
+}
+
+.share-icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  padding: 0.5rem;
+  border-radius: 100%;
+  background-color: var(--clr-four);
+  color: var(--clr-two);
+  transition: all 0.1s ease;
+}
+
+.share-icon:hover {
+  cursor: pointer;
+}
+
+.share-icon:active {
+  color: #fff;
+  background-color: var(--clr-one);
 }
 
 /* Footer */
@@ -44,4 +116,26 @@ article {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* BELOW 700PX (TABLETS) */
+@media (max-width: 43.75em) {
+  article {
+    flex-direction: column;
+    width: min-content;
+  }
+
+  .article-img {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .article-desc {
+    margin-bottom: 2.4rem;
+  }
+
+  .share-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    padding: 1rem;
+  }
 }
