@@ -1,0 +1,47 @@
+:root {
+  --clr-one: hsl(217, 19%, 35%);
+  --clr-two: hsl(214, 17%, 51%);
+  --clr-three: hsl(212, 23%, 69%);
+  --clr-four: hsl(210, 46%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Manrope", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.3rem;
+}
+
+article {
+  margin: 10rem auto;
+  border: 2px solid red;
+  width: fit-content;
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-img {
+  width: 30rem;
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
