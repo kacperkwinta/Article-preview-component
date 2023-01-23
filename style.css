@@ -143,24 +143,41 @@ article {
   border-color: hsl(217, 19%, 35%) transparent transparent transparent;
 }
 
-.popup-window span {
+.popup-window span,
+.popup-window-mobile span {
   letter-spacing: 3px;
   color: var(--clr-three);
 }
 
 .popup-window ion-icon {
-  font-size: 2rem;
+  font-size: 2.2rem;
+  color: var(--clr-four);
 }
 
 .popup-window > :not(span):hover {
   cursor: pointer;
 }
 
-/* POPUP ON SCREENS BELOW 700PX */
+/* POPUP BELOW 700PX */
+.popup-window-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.4rem;
+}
 
-.mobile-popup {
-  position: absolute;
-  border: 1px solid red;
+.popup-window-mobile .container {
+  gap: 1.2rem;
+}
+
+.popup-window-mobile ion-icon {
+  font-size: 2.2rem;
+  color: var(--clr-one);
+}
+
+.popup-window-mobile .share-icon {
+  color: var(--clr-four);
+  background-color: var(--clr-two);
 }
 
 .hidden {
@@ -181,8 +198,14 @@ article {
 /* BELOW 700PX (TABLETS) */
 @media (max-width: 43.75em) {
   article {
+    margin: 3rem auto;
     flex-direction: column;
     width: min-content;
+  }
+
+  .article-text {
+    padding: 3.4rem 3.4rem 2.4rem 3.4rem;
+    position: relative;
   }
 
   .article-img {
@@ -192,5 +215,10 @@ article {
 
   .article-desc {
     margin-bottom: 2.4rem;
+  }
+
+  /* DEACTIVATE DESKTOP POPUP */
+  .popup-window {
+    display: none;
   }
 }

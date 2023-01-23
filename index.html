@@ -56,16 +56,23 @@
 
             <ion-icon
               class="share-icon"
-              onclick="popupShow()"
+              onclick="popupDesktopShow()"
               name="arrow-redo"
             ></ion-icon>
           </div>
         </div>
 
-        <div class="mobile-popup">
-          
-        </div>
+        <div class="popup-window-mobile hidden">
+          <div class="container">
+            <span>SHARE</span>
+            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-twitter"></ion-icon>
+            <ion-icon name="logo-pinterest"></ion-icon>
+          </div>
 
+          <ion-icon class="share-icon" onclick="popupMobileShow()" name="arrow-redo">
+          </ion-icon>
+        </div>
       </div>
     </article>
 
