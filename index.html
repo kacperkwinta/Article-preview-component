@@ -20,6 +20,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <article>
       <img class="article-img" src="images/drawers.jpg" alt="" />
@@ -32,22 +33,39 @@
 
         <p class="article-desc">
           Ever been in a room and felt like something was missing? Perhaps it
-          felt slightly bare and uninviting. I’ve got some simple tips to help
+          felt slightly bare and uninviting. I've got some simple tips to help
           you make any room feel complete.
         </p>
 
         <div class="profile-wrapper">
           <div class="container">
             <img class="profile-img" src="images/avatar-michelle.jpg" alt="" />
-
             <span class="article-info">
               <p class="author">Michelle Appleton</p>
               <p class="article-date">28 Jun 2020</p>
             </span>
           </div>
 
-            <ion-icon class="share-icon" name="arrow-redo"></ion-icon>
+          <div class="popup">
+            <div class="popup-window hidden">
+              <span>SHARE</span>
+              <ion-icon name="logo-facebook"></ion-icon
+              ><ion-icon name="logo-twitter"></ion-icon
+              ><ion-icon name="logo-pinterest"></ion-icon>
+            </div>
+
+            <ion-icon
+              class="share-icon"
+              onclick="popupShow()"
+              name="arrow-redo"
+            ></ion-icon>
+          </div>
         </div>
+
+        <div class="mobile-popup">
+          
+        </div>
+
       </div>
     </article>
 
@@ -67,5 +85,7 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <!-- Popup Script -->
+    <script src="script.js"></script>
   </body>
 </html>

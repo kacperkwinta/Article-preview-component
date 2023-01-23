@@ -23,8 +23,8 @@ body {
 
 article {
   /* border: 2px solid red */
-  max-width: 70rem;
-  margin: 10rem auto;
+  max-width: 80rem;
+  margin: 15rem auto;
   width: fit-content;
   border-radius: 10px;
   background-color: #fff;
@@ -39,22 +39,23 @@ article {
   /* border: 2px solid green; */
 
   border-radius: 10px 0 0 10px;
-  width: 30rem;
+  width: 35rem;
 }
 
 .article-text {
-  padding: 2rem;
+  padding: 3.4rem;
+  position: relative;
 }
 
 .article-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 1.2rem;
   color: var(--clr-one);
 }
 
 .article-desc {
   color: var(--clr-two);
-  margin-bottom: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 .profile-wrapper {
@@ -85,14 +86,14 @@ article {
 }
 
 .article-date {
-  font-size: 1rem;
   color: var(--clr-three);
+  font-size: 1.2rem;
 }
 
 .share-icon {
-  width: 1.3rem;
-  height: 1.3rem;
-  padding: 0.5rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  padding: 0.8rem;
   border-radius: 100%;
   background-color: var(--clr-four);
   color: var(--clr-two);
@@ -108,10 +109,69 @@ article {
   background-color: var(--clr-one);
 }
 
+/* POPUP ON 700px+ screens */
+.popup {
+  position: relative;
+}
+
+.popup-window {
+  position: absolute;
+  top: -100%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  background-color: var(--clr-one);
+  color: var(--clr-four);
+  border-radius: 10px;
+  width: 20rem;
+  height: 5rem;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.popup-window::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 48%;
+  margin-left: -0.5rem;
+  border-width: 1rem;
+  border-style: solid;
+  border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+}
+
+.popup-window span {
+  letter-spacing: 3px;
+  color: var(--clr-three);
+}
+
+.popup-window ion-icon {
+  font-size: 2rem;
+}
+
+.popup-window > :not(span):hover {
+  cursor: pointer;
+}
+
+/* POPUP ON SCREENS BELOW 700PX */
+
+.mobile-popup {
+  position: absolute;
+  border: 1px solid red;
+}
+
+.hidden {
+  display: none;
+}
+
 /* Footer */
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .attribution a {
@@ -127,15 +187,10 @@ article {
 
   .article-img {
     border-radius: 10px 10px 0 0;
+    width: 30rem;
   }
 
   .article-desc {
     margin-bottom: 2.4rem;
-  }
-
-  .share-icon {
-    width: 1.8rem;
-    height: 1.8rem;
-    padding: 1rem;
   }
 }
